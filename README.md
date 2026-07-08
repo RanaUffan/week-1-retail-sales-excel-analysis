@@ -1,48 +1,36 @@
 # week-1-retail-sales-excel-analysis
 
 ## Project Title
-Retail Sales Data Analysis — LogicStack Data Analysis Internship
+Retail Sales & Supply Chain Data Analysis — LogicStack Data Analysis Internship
 
 ## Project Objective
-The objective of this project is to clean, analyze, and visualize 
-a retail sales dataset using Microsoft Excel and Power BI. This 
-project covers basic to advanced data analysis skills including 
-data cleaning, KPI calculations, pivot tables, and interactive 
-dashboard creation.
+This project covers 3 weeks of data analysis tasks completed during the 
+LogicStack Data Analysis Internship (June-July 2026). It progresses from 
+basic Excel analysis to advanced Python and Power BI dashboard creation.
 
 ## Tools Used
 - Microsoft Excel / Google Sheets
 - Power BI Desktop
-- GitHub (for submission)
-
-## Dataset Columns
-The dataset contains 1,000 retail transactions with these columns:
-- Transaction ID — Unique ID for each transaction
-- Date — Date of the transaction
-- Customer ID — Unique ID of the customer
-- Gender — Gender of the customer
-- Age — Age of the customer
-- Product Category — Category of product purchased
-- Quantity — Number of items purchased
-- Price per Unit — Price of one unit
-- Total Amount — Total sales amount of the transaction
+- Python (Pandas, Matplotlib)
+- GitHub
 
 ## Week 1 — Excel Data Cleaning & Basic Analysis
 
+### Dataset
+retail_sales_dataset.csv — 1,000 retail transactions, 9 columns
+
 ### Work Completed
 - Opened and explored the dataset structure
-- Cleaned and formatted the data (bold headers, date format, 
-  currency format, frozen header row)
+- Cleaned and formatted data (bold headers, date format, currency format)
 - Checked data quality (blank cells, duplicates, valid values)
 - Added Calculated Total and Amount Check columns using formulas
 - Calculated key metrics using SUM, AVERAGE, MIN, MAX, COUNT
-- Created summary tables using SUMIF (sales by category, 
-  gender, quantity by category)
-- Applied sorting and filtering, captured screenshots
-- Built Bar, Column, and Pie charts to visualize the data
-- Written observations based on the analysis
+- Created summary tables using SUMIF
+- Applied sorting and filtering with screenshots
+- Built Bar, Column, and Pie charts
+- Written observations based on analysis
 
-### Excel Sheets Included
+### Excel Sheets
 1. Original Data
 2. Cleaned Data
 3. Dataset Understanding
@@ -52,20 +40,23 @@ The dataset contains 1,000 retail transactions with these columns:
 7. Charts
 8. Observations
 
-### Week 1 Key Observations
-1. Electronics had the highest total sales (Rs. 156,905), slightly 
-   ahead of Clothing (Rs. 155,580), while Beauty had the lowest 
-   (Rs. 143,515).
-2. Beauty had the lowest sales even though its quantity sold was 
-   close to the other categories.
-3. Female customers generated more total sales (Rs. 232,840) than 
+### Key Observations
+1. Electronics had the highest total sales (Rs. 156,905), slightly ahead
+   of Clothing (Rs. 155,580), while Beauty had the lowest (Rs. 143,515).
+2. Beauty had the lowest sales even though quantity sold was close
+   to other categories.
+3. Female customers generated more total sales (Rs. 232,840) than
    male customers (Rs. 223,160).
-4. Customer ages range from 18 to 64, showing a wide adult 
-   customer base.
-5. The highest single transaction was Rs. 2,000, much higher than 
+4. Customer ages range from 18 to 64, showing a wide adult customer base.
+5. The highest single transaction was Rs. 2,000, much higher than
    the average sale of Rs. 456.
 
+---
+
 ## Week 2 — Advanced Excel + Power BI Dashboard
+
+### Dataset
+Same retail_sales_dataset.csv from Week 1
 
 ### Work Completed
 - Created 4 Pivot Tables:
@@ -80,31 +71,66 @@ The dataset contains 1,000 retail transactions with these columns:
   - Total Quantity Sold: 2,514
   - Highest Transaction Value: Rs. 2,000
   - Lowest Transaction Value: Rs. 25
-- Written 5 business insights based on data analysis
+- Written 5 business insights
 - Built interactive Power BI Dashboard
 
-### Power BI Dashboard Includes
-- KPI Cards: Total Sales, Total Transactions, 
-  Average Sales, Total Quantity Sold
+### Power BI Dashboard
+- KPI Cards: Total Sales, Total Transactions, Average Sales, Total Quantity
 - Bar Chart: Sales by Product Category
 - Pie Chart: Sales by Gender
 - Column Chart: Quantity Sold by Category
-- Line Chart: Sales Trend Over Time (Jan 2023 - Jan 2024)
+- Line Chart: Sales Trend Over Time
 
-### Week 2 Key Insights
-1. Electronics is the strongest category with total sales of 
-   Rs. 156,905, slightly ahead of Clothing (Rs. 155,580).
-2. Beauty category had the lowest total sales despite having 
-   a reasonable quantity sold (771 units).
-3. Female customers are the stronger buying segment with total 
-   sales of Rs. 232,840 compared to male at Rs. 223,160.
-4. Average customer age across all categories is around 41 years,
-   indicating middle-aged adults as primary customers.
-5. Wide transaction range from Rs. 25 to Rs. 2,000 shows diverse 
-   customer purchasing behavior.
+### Key Insights
+1. Electronics is the strongest category with total sales of Rs. 156,905.
+2. Beauty had the lowest sales despite reasonable quantity sold (771 units).
+3. Female customers are stronger buying segment (Rs. 232,840 vs Rs. 223,160).
+4. Average customer age is around 41 years — middle-aged adult base.
+5. Wide transaction range from Rs. 25 to Rs. 2,000 shows diverse behavior.
+
+---
+
+## Week 3 — Supply Chain Analytics (Python + Power BI)
+
+### Dataset
+SCMS_Delivery_History_Dataset.csv — 10,324 records, 33 columns
+
+### Work Completed
+- Loaded and explored supply chain dataset using Python Pandas
+- Cleaned data: converted dates, handled missing values, fixed numeric columns
+- Performed EDA: shipment analysis, delivery performance, cost analysis
+- Group-based analysis: Country, Vendor, Product Group, Shipment Mode
+- Created 3 Python charts (Bar, Pie, Line) using Matplotlib
+- Built Power BI Supply Chain Performance Dashboard
+
+### Power BI Dashboard
+- Title: Supply Chain Performance Dashboard
+- KPI Cards: Total Shipments, Total Freight Cost, Average Delivery Delay,
+  Total Line Item Value
+- Bar Chart: Country vs Total Shipments
+- Line Chart: Delivery Trend Over Time
+- Pie Chart: Shipment Mode Distribution
+- Column Chart: Vendor vs Total Cost
+
+### Key Insights
+1. Air is most common shipment mode (61.4% of total shipments), showing
+   speed is prioritized over cost.
+2. South Africa has highest shipments (1,406), followed by Nigeria (1,194).
+3. Average delivery delay is -6.02 days meaning shipments arrive early.
+4. Total freight cost is $93 million across 10,324 shipments.
+5. Ocean shipments have highest delay (+5.87 days) while Air Charter
+   is fastest (-19.04 days).
+
+### Business Recommendations
+1. Reduce Ocean shipments where possible — switch to Air or Truck for
+   time-sensitive deliveries to avoid delays.
+2. Focus supply chain resources on top countries (South Africa, Nigeria)
+   as they handle highest volume and need more vendor support.
+
+---
 
 ## Note for Viewers
-This project shows my Week 1 and Week 2 work for LogicStack Data 
-Analysis Internship. Each Excel sheet is organized by task for 
-easy review. Power BI dashboard screenshot is also included in 
-this repository.
+This repository contains my Week 1, 2, and 3 submissions for the 
+LogicStack Data Analysis Internship. Each week builds on the previous 
+one — from basic Excel to advanced Python and Power BI dashboards. 
+All files are organized by week for easy review.
